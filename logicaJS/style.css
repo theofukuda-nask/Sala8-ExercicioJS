@@ -2,11 +2,8 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    
-
+    font-family: Michroma;
 }
-
-
 
 body{
     display: flex;
@@ -16,14 +13,8 @@ body{
     gap: 5vh;
     min-height: 100vh;
     height: auto;
-    background-image: linear-gradient(to bottom, #b41dd69a, #251a1ae7);
+    background-image: linear-gradient(to bottom, purple, black);
     font-family: arial;
-}
-
-.title{
-    color: red;
-    font-size: 5rem;
-    
 }
 
 div{
@@ -33,8 +24,7 @@ div{
     padding-bottom: 25px;
     padding-top: 25px;
     background-color: white;
-    
-    
+
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
 }
 
@@ -67,4 +57,3 @@ button{
 button:hover{
     background-color: rgb(219, 35, 97);
 }
-
