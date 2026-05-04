@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>🐍 Snake Shop Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🐍 Snake Shop</h1>
+  <div id="scoreContainer">
+    💰 <span id="totalCoins">0</span> | Pontos: <span id="score">0</span>
+  </div>
+
+  <canvas id="game" width="400" height="400"></canvas>
+
+  <!-- MENU PRINCIPAL -->
+  <div id="menu">
+    <div class="box">
+      <h2>🛒 Loja e Skins</h2>
+      
+      <p>Skins Disponíveis:</p>
+      <div class="skins" id="skinList">
+        <button class="skin green selected" data-skin="lime">Verde</button>
+        <button class="skin blue" data-skin="cyan">Azul</button>
+        <button class="skin red" data-skin="red">Vermelha</button>
+      </div>
+
+      <p>Loja de Itens:</p>
+      <div class="shop">
+        <button class="item-btn" id="buyGoldSkin">✨ Skin Ouro (50¢)</button>
+        <button class="item-btn" id="buyShield">🛡️ Comprar Escudo (20¢)</button>
+      </div>
+      
+      <div id="statusInfo">
+        <small id="shieldStatus">Escudos em estoque: 0</small>
+      </div>
+
+      <button id="startBtn">Começar Partida</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="gameOver" style="display: none;">
+    <div class="box">
+      <h2>💀 Fim de Jogo</h2>
+      <p>Você coletou <span id="roundCoins">0</span> moedas!</p>
+      <button id="restartBtn">Voltar ao Menu</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
