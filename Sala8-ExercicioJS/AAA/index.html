@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>🇧🇷 COBRA GRANDE .io</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui">
+        <div class="score-board">
+            <p>⭐ Moedas: <span id="coinCount">0</span></p>
+            <p>📏 Tamanho: <span id="currentScore">0</span>m</p>
+        </div>
+    </div>
+
+    <!-- MENU PRINCIPAL / MORTE / LOJA -->
+    <div id="menu">
+        <div class="box">
+            <h1 id="menuTitle">COBRA GRANDE E BRASILEIRA.io</h1>
+            <p id="statsText">Coma, creça e não morra!</p>
+            
+            <div class="shop-section">
+                <h3>Skins Disponíveis</h3>
+                <div class="skin-list">
+                    <button class="skin-btn active" data-color="#009c3b" data-price="0">Padrão</button>
+                    <button class="skin-btn" data-color="#ff0000" data-price="50">Vermelha (50¢)</button>
+                    <button class="skin-btn" data-color="#0000ff" data-price="50">Azul (50¢)</button>
+                    <button class="skin-btn" data-color="#ffd700" data-price="200">Ouro (200¢)</button>
+                    <button class="skin-btn" data-color="lgbt" data-price="100">LGBT!(500¢)</button>
+
+                </div>
+            </div>
+
+            <button id="startBtn">JOGAR</button>
+        </div>
+    </div>
+
+    <div id="leaderboard">
+    <h3>🏆 TOP COBRAS</h3>
+    <div id="leaderList"></div>
+</div>
+
+
+    <canvas id="gameCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

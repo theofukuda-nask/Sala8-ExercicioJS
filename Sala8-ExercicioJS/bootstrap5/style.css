@@ -1,0 +1,10 @@
+* {
+    margin: 0; /* Alterado de 'none' para '0' pois 'none' não é um valor válido para margin */
+    padding: 0;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

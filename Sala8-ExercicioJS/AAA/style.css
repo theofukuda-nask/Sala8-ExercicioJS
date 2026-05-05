@@ -1,0 +1,43 @@
+body { margin: 0; overflow: hidden; background: #0d1117; font-family: sans-serif; color: white; }
+canvas { display: block; }
+#ui { position: fixed; top: 20px; left: 20px; z-index: 10; pointer-events: none; }
+.score-board { background: rgba(0,0,0,0.7); padding: 10px 20px; border-radius: 8px; border-left: 4px solid #ffdf00; }
+
+#menu { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; justify-content: center; align-items: center; z-index: 100; }
+.box { background: #1a1a1a; padding: 30px; border-radius: 15px; border: 2px solid #009c3b; width: 350px; text-align: center; }
+
+.shop-section { margin: 20px 0; padding: 15px; background: #252525; border-radius: 10px; }
+.skin-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.skin-btn { padding: 8px; cursor: pointer; border: 2px solid transparent; background: #333; color: white; border-radius: 5px; font-size: 12px; }
+.skin-btn.active { border-color: #009c3b; background: #004b1e; }
+.skin-btn.locked { opacity: 0.6; }
+
+#startBtn { width: 100%; padding: 15px; background: #ffdf00; color: #000; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; font-size: 18px; }
+
+#leaderboard {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    border-right: 5px solid #ffdf00;
+    min-width: 180px;
+    pointer-events: none;
+}
+
+#leaderboard h3 { 
+    margin: 0 0 10px 0; 
+    font-size: 16px; 
+    color: #ffdf00; 
+    text-align: center;
+}
+
+.leader-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.leader-item.player { color: #00ff00; font-weight: bold; }
