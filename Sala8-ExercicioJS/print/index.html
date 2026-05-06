@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.CSS">
+    <title>Prints e tals</title>
+</head>
+<body>
+
+    <!-- NAV AJUSTADA: FUNDO BRANCO E LINKS VISÍVEIS -->
+    <nav class="main-nav">
+        <a href="../Calculos/">Cálculos</a>
+        <a href="../AAA/">AAA</a>
+        <a href="../bootstrap5/">Bootstrap</a>
+        <a href="../print/">Print</a>
+        <a href="../calculadoraGPT">Calculadora</a>
+        <a href="../media">Média</a>
+    </nav>
+
+    <main>
+        <h1>Prints e tals</h1>
+        
+        <label for="AI1">Insira um livro:</label>
+        <input type="text" id="AI1"><br>
+
+        <label for="AI2">Escolha uma cor:</label>
+        <input type="color" id="AI2"><br>
+
+        <label for="AI3">Permite expor todos os seus dados pessoais?:</label>
+        <input type="checkbox" id="AI3"><br>
+
+        <label for="AI4">Insira sua data de nascimento:</label>
+        <input type="date" id="AI4"><br>
+
+        <button onclick="mostrar()">MOSTRAR</button>
+    </main>
+
+    <div class="print" id="print">
+        <p id="printTexto"></p>
+        <p id="printCor"></p>
+        <p id="printCheck"></p>
+        <p id="printData"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

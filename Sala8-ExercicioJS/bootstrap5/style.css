@@ -1,10 +1,38 @@
-* {
-    margin: 0; /* Alterado de 'none' para '0' pois 'none' não é um valor válido para margin */
+/* Reset básico para o topo */
+body {
+    margin: 0;
     padding: 0;
+    background-color: #f8f9fa; /* Um cinza bem claro para destacar a nav branca */
 }
 
-div {
+/* ESTILO DA SUA NAV PERSONALIZADA */
+.main-nav {
+    background-color: #ffffff !important; /* Força o fundo branco */
+    width: 100%;
+    padding: 15px 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 20px;
+    border-bottom: 2px solid #dee2e6;
+    position: relative; /* Ocupa espaço no topo, empurrando o H1 para baixo */
+    z-index: 1100;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0d6efd; /* Azul padrão do Bootstrap */
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.main-nav a:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+/* Centralização para seus componentes */
+.central {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }

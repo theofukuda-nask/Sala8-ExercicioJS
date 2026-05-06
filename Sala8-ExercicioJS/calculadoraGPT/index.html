@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Moderna</title>
+
+  <style>
+    /* RESET E ESTRUTURA DO BODY */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column; /* Coloca a nav no topo e o conteúdo abaixo */
+      background: linear-gradient(135deg, #ff7a18, #32d2aa);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* ESTILO DA NAV - FUNDO BRANCO E SEM SOBREPOSIÇÃO */
+    nav {
+      background-color: #ffffff;
+      width: 100%;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff7a18;
+    }
+
+    /* CONTAINER PARA CENTRALIZAR A CALCULADORA NO ESPAÇO RESTANTE */
+    .main-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .calculadora {
+      background: #1e1e2f;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    #display {
+      width: 100%;
+      height: 70px;
+      font-size: 32px;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background: #0f0f1a;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      gap: 12px;
+    }
+
+    button {
+      height: 70px;
+      font-size: 22px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #2d2d44;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #3d3d5c;
+    }
+
+    .operador {
+      background: #ff9f43;
+      color: #fff;
+    }
+
+    .operador:hover {
+      background: #ff7f11;
+    }
+
+    .igual {
+      background: #00c853;
+      grid-column: span 2;
+      color: white;
+    }
+
+    .igual:hover {
+      background: #00a844;
+    }
+
+    .limpar {
+      background: #ff3b3b;
+      grid-column: span 2;
+      color: white;
+    }
+
+    .limpar:hover {
+      background: #cc2f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV DENTRO DO BODY COM NOMES NOS LINKS -->
+  <nav>
+    <a href="../Calculos/">Cálculos</a>
+    <a href="../AAA/">AAA</a>
+    <a href="../bootstrap5/">Bootstrap</a>
+    <a href="../print/">Print</a>
+    <a href="../calculadoraGPT">CalculadoraGPT</a>
+    <a href="../media">Média</a>
+  </nav>
+
+  <div class="main-container">
+    <div class="calculadora">
+      <input type="text" id="display" disabled>
+
+      <div class="botoes">
+        <button onclick="limpar()" class="limpar">C</button>
+        <button onclick="adicionar('/')" class="operador">÷</button>
+
+        <button onclick="adicionar('7')">7</button>
+        <button onclick="adicionar('8')">8</button>
+        <button onclick="adicionar('9')">9</button>
+        <button onclick="adicionar('*')" class="operador">×</button>
+
+        <button onclick="adicionar('4')">4</button>
+        <button onclick="adicionar('5')">5</button>
+        <button onclick="adicionar('6')">6</button>
+        <button onclick="adicionar('-')" class="operador">−</button>
+
+        <button onclick="adicionar('1')">1</button>
+        <button onclick="adicionar('2')">2</button>
+        <button onclick="adicionar('3')">3</button>
+        <button onclick="adicionar('+')" class="operador">+</button>
+
+        <button onclick="adicionar('0')">0</button>
+        <button onclick="adicionar('.')">.</button>
+        <button onclick="calcular()" class="igual">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function adicionar(valor) {
+      document.getElementById('display').value += valor;
+    }
+
+    function limpar() {
+      document.getElementById('display').value = '';
+    }
+
+    function calcular() {
+      let display = document.getElementById('display');
+      try {
+        // O replace serve para tratar o caso de múltiplos pontos ou operadores errados
+        display.value = eval(display.value);
+      } catch {
+        display.value = 'Erro';
+      }
+    }
+  </script>
+
+</body>
+</html>

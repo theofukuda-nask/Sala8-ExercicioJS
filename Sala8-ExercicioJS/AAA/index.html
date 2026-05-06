@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- NAV COM FUNDO BRANCO E SEM SOBREPOSIÇÃO -->
+    <nav class="top-nav">
+        <a href="../Calculos/">Cálculos</a>
+        <a href="../AAA/">AAA</a>
+        <a href="../bootstrap5/">Bootstrap</a>
+        <a href="../print/">Print</a>
+        <a href="../calculadoraGPT">CalculadoraGPT</a>
+        <a href="../media">Média</a>
+    </nav>
+
     <div id="ui">
         <div class="score-board">
             <p>⭐ Moedas: <span id="coinCount">0</span></p>
@@ -16,8 +27,8 @@
     <!-- MENU PRINCIPAL / MORTE / LOJA -->
     <div id="menu">
         <div class="box">
-            <h1 id="menuTitle">COBRA GRANDE E BRASILEIRA.io</h1>
-            <p id="statsText">Coma, creça e não morra!</p>
+            <h1 id="menuTitle">COBRA GRANDE E BRASILEIRA.io </h1>
+            <p id="statsText">Coma, cresça e não morra!</p>
             
             <div class="shop-section">
                 <h3>Skins Disponíveis</h3>
@@ -26,8 +37,7 @@
                     <button class="skin-btn" data-color="#ff0000" data-price="50">Vermelha (50¢)</button>
                     <button class="skin-btn" data-color="#0000ff" data-price="50">Azul (50¢)</button>
                     <button class="skin-btn" data-color="#ffd700" data-price="200">Ouro (200¢)</button>
-                    <button class="skin-btn" data-color="lgbt" data-price="100">LGBT!(500¢)</button>
-
+                    <button class="skin-btn" data-color="lgbt" data-price="100">LGBT! (500¢)</button>
                 </div>
             </div>
 
@@ -36,12 +46,12 @@
     </div>
 
     <div id="leaderboard">
-    <h3>🏆 TOP COBRAS</h3>
-    <div id="leaderList"></div>
-</div>
-
+        <h3>🏆 TOP COBRAS</h3>
+        <div id="leaderList"></div>
+    </div>
 
     <canvas id="gameCanvas"></canvas>
+    
     <script src="script.js"></script>
 </body>
 </html>

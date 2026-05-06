@@ -41,3 +41,57 @@ canvas { display: block; }
 }
 
 .leader-item.player { color: #00ff00; font-weight: bold; }
+
+/* Reset básico para evitar espaços vazios */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Coloca a nav em cima e o jogo embaixo */
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem no jogo */
+}
+
+/* ESTILO DA NAV - FUNDO BRANCO E SEM SOBREPOR */
+.top-nav {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative; /* Garante que ela ocupe espaço real no topo */
+    z-index: 1000;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.top-nav a:hover {
+    color: #009c3b; /* Cor verde temática ao passar o mouse */
+}
+
+/* Ajuste no Canvas para preencher o resto da tela */
+#gameCanvas {
+    flex-grow: 1;
+    background-color: #111; /* Cor de fundo do jogo */
+    display: block;
+}
+
+/* Mantém a UI e o Menu flutuando sobre o Canvas, não sobre a Nav */
+#ui, #menu, #leaderboard {
+    position: absolute;
+    z-index: 10;
+}

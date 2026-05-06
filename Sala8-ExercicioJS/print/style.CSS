@@ -1,0 +1,59 @@
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh
+}
+
+input{
+    border-radius: 999px;
+}
+
+button{
+    border-radius: 999px;
+}
+
+button:hover{
+    background-color: rgb(199, 29, 171);
+}
+
+div{
+    width: 100rem;
+    height: 100rem;
+}
+
+/* Estilo para a Nav */
+.main-nav {
+    background-color: white;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Ocupa espaço e empurra o conteúdo para baixo */
+    z-index: 1000;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Garante que o body não esconda a nav */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
